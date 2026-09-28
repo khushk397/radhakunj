@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Radha Kunj Hotel & Restaurant — pure vegetarian dining and comfortable stays at Hatod.">
+  <title>Radha Kunj | Hotel & Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --green: #064f43;
+      --green2: #0b6656;
+      --gold: #f2c45f;
+      --gold2: #ffe1a0;
+      --cream: #f7f1e5;
+      --paper: #fffdf8;
+      --brown: #33261c;
+      --muted: #74695d;
+      --line: rgba(51, 38, 28, .13);
+      --serif: "Cormorant Garamond", serif;
+      --sans: "Jost", sans-serif
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--brown);
+      line-height: 1.65;
+      overflow-x: hidden
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    img {
+      display: block;
+      max-width: 100%
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: auto
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--serif);
+      line-height: 1.05;
+      font-weight: 600
+    }
+
+    h2 {
+      font-size: clamp(2.4rem, 5vw, 4rem)
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      font: italic 1.15rem var(--serif)
+    }
+
+    .eyebrow:before,
+    .eyebrow:after {
+      content: "";
+      width: 27px;
+      height: 1px;
+      background: currentColor
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 23px;
+      border: 1px solid transparent;
+      text-transform: uppercase;
+      letter-spacing: .11em;
+      font-size: .73rem;
+      transition: .25s;
+      cursor: pointer
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--brown)
+    }
+
+    .btn-gold:hover {
+      background: var(--gold2);
+      transform: translateY(-2px)
+    }
+
+    .btn-outline {
+      border-color: rgba(255, 255, 255, .55);
+      color: #fff
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold2);
+      color: var(--gold2)
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      color: #fff;
+      transition: .3s
+    }
+
+    header.scrolled {
+      background: rgba(247, 241, 229, .96);
+      backdrop-filter: blur(14px);
+      color: var(--brown);
+      box-shadow: 0 4px 25px rgba(0, 0, 0, .08)
+    }
+
+    nav {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px
+    }
+
+    .brand img {
+      height: 52px;
+      width: auto
+    }
+
+    .brand-name {
+      font: 600 1.45rem var(--serif);
+      letter-spacing: .04em
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: .76rem;
+      text-transform: uppercase;
+      letter-spacing: .08em
+    }
+
+    .navlinks a:hover {
+      color: var(--gold)
+    }
+
+    .navcta {
+      background: var(--gold);
+      color: var(--brown) !important;
+      padding: 10px 17px
+    }
+
+    .hamb {
+      display: none;
+      border: 0;
+      background: none;
+      color: currentColor;
+      font-size: 1.6rem
+    }
+
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: flex-end;
+      padding: 150px 0 72px;
+      color: #fff;
+      background: linear-gradient(90deg, rgba(6, 37, 30, .9), rgba(6, 37, 30, .42)), linear-gradient(0deg, rgba(30, 22, 16, .65), transparent 58%), url("100895.jpg") center/cover
+    }
+
+    .hero-content {
+      max-width: 780px
+    }
+
+    .hero-logo {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      margin-bottom: 12px
+    }
+
+    .hero h1 {
+      font-size: clamp(3.6rem, 8vw, 7rem);
+      color: #fff;
+      margin: 8px 0 18px
+    }
+
+    .hero h1 span {
+      color: var(--gold2)
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: #eee6d7;
+      font-size: 1.05rem
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+      margin-top: 30px
+    }
+
+    .note {
+      margin-top: 22px;
+      font-size: .76rem;
+      color: #ddd3c0;
+      letter-spacing: .05em
+    }
+
+    .section {
+      padding: 100px 0
+    }
+
+    .sectionhead {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 48px
+    }
+
+    .sectionhead p {
+      color: var(--muted);
+      margin-top: 16px
+    }
+
+    .intro {
+      background: var(--paper)
+    }
+
+    .introgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center
+    }
+
+    .introimg {
+      height: 540px;
+      object-fit: cover
+    }
+
+    .introcopy h2 {
+      margin: 12px 0 22px
+    }
+
+    .introcopy p {
+      color: var(--muted);
+      margin-bottom: 15px
+    }
+
+    .signature {
+      font: italic 1.7rem var(--serif);
+      color: var(--green);
+      margin-top: 25px
+    }
+
+    .features {
+      background: #eee6d5
+    }
+
+    .featuregrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--line)
+    }
+
+    .feature {
+      padding: 35px 25px;
+      border-right: 1px solid var(--line)
+    }
+
+    .feature:last-child {
+      border: 0
+    }
+
+    .feature .icon {
+      font-size: 1.6rem;
+      color: var(--gold);
+      margin-bottom: 14px
+    }
+
+    .feature h3 {
+      font-size: 1.5rem;
+      margin-bottom: 8px
+    }
+
+    .feature p {
+      font-size: .86rem;
+      color: var(--muted)
+    }
+
+    .rooms {
+      background: var(--paper)
+    }
+
+    .roomgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px
+    }
+
+    .room {
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 45px rgba(45, 35, 25, .08)
+    }
+
+    .room img {
+      height: 290px;
+      width: 100%;
+      object-fit: cover
+    }
+
+    .roombody {
+      padding: 28px
+    }
+
+    .room h3 {
+      font-size: 2rem
+    }
+
+    .room p {
+      color: var(--muted);
+      margin: 10px 0 18px
+    }
+
+    .roomtags {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin-bottom: 22px
+    }
+
+    .roomtags span {
+      background: var(--cream);
+      padding: 6px 9px;
+      font-size: .7rem;
+      color: var(--muted)
+    }
+
+    .roombottom {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .menu {
+      background: var(--green);
+      color: #fff
+    }
+
+    .menu .sectionhead p {
+      color: #d6e0d6
+    }
+
+    .menu .eyebrow {
+      color: var(--gold2)
+    }
+
+    .menu h2 {
+      color: #fff
+    }
+
+    .menubrowse {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 0 auto 28px
+    }
+
+    .menufilters {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      max-width: 980px;
+      margin: 0 auto 18px
+    }
+
+    .menufilter {
+      border: 1px solid rgba(255, 255, 255, .28);
+      background: transparent;
+      color: #fff;
+      padding: 9px 15px;
+      border-radius: 99px;
+      font-size: .7rem;
+      letter-spacing: .04em;
+      cursor: pointer;
+      transition: .2s
+    }
+
+    .menufilter.active,
+    .menufilter:hover {
+      background: var(--gold);
+      color: var(--brown);
+      border-color: var(--gold)
+    }
+
+    .menu-mobile-select {
+      display: none;
+      width: 100%;
+      max-width: 520px;
+      padding: 14px 15px;
+      border: 1px solid rgba(255, 255, 255, .3);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--brown);
+      font: 500 .9rem var(--sans)
+    }
+
+    .menustatus {
+      text-align: center;
+      color: #d7dfd8;
+      font-size: .76rem;
+      letter-spacing: .06em;
+      margin: 8px 0 18px
+    }
+
+    .menunav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 22px
+    }
+
+    .menunav button {
+      border: 1px solid rgba(255, 255, 255, .3);
+      background: rgba(255, 255, 255, .06);
+      color: #fff;
+      padding: 9px 14px;
+      border-radius: 9px;
+      cursor: pointer;
+      font: 500 .72rem var(--sans)
+    }
+
+    .menunav button:hover {
+      background: var(--gold);
+      color: var(--brown)
+    }
+
+    .menugrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px
+    }
+
+    .menucard {
+      background: #fff;
+      color: var(--brown);
+      padding: 24px;
+      border: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .menucard h3 {
+      font-size: 1.8rem;
+      color: var(--green);
+      margin-bottom: 14px
+    }
+
+    .menuitem {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: .87rem
+    }
+
+    .menuitem:last-child {
+      border-bottom: 0
+    }
+
+    .menuitem strong {
+      white-space: nowrap;
+      color: var(--green)
+    }
+
+    .menudesc {
+      display: block;
+      font-size: .69rem;
+      color: var(--muted);
+      line-height: 1.35;
+      margin-top: 1px
+    }
+
+    .menuempty {
+      text-align: center;
+      padding: 30px;
+      color: #d7dfd8
+    }
+
+    .booking {
+      background: #eee6d5
+    }
+
+    .bookinggrid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 45px;
+      align-items: start
+    }
+
+    .bookingintro h2 {
+      margin: 12px 0 18px
+    }
+
+    .bookingintro p {
+      color: var(--muted);
+      margin-bottom: 20px
+    }
+
+    .bookingsteps {
+      margin-top: 25px
+    }
+
+    .bookingsteps div {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: .87rem
+    }
+
+    .bookingsteps b {
+      color: var(--green);
+      margin-right: 8px
+    }
+
+    .bookingform {
+      background: #fff;
+      padding: 32px;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 45px rgba(45, 35, 25, .08)
+    }
+
+    .formgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px
+    }
+
+    .field.full {
+      grid-column: 1/-1
+    }
+
+    .field label {
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      color: var(--muted)
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #d9d0c2;
+      background: #fffdf9;
+      color: var(--brown);
+      font: inherit;
+      outline: none
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--green)
+    }
+
+    .field textarea {
+      min-height: 100px;
+      resize: vertical
+    }
+
+    .formnote {
+      font-size: .7rem;
+      color: var(--muted);
+      margin: 15px 0
+    }
+
+    .bookingform .btn {
+      width: 100%
+    }
+
+    .banner {
+      min-height: 430px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(rgba(6, 54, 44, .72), rgba(6, 54, 44, .8)), url("100894.jpg") center/cover fixed
+    }
+
+    .banner h2 {
+      color: #fff;
+      margin: 14px 0
+    }
+
+    .banner p {
+      color: #e9e4d9
+    }
+
+    .space-showcase {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      min-height: 620px;
+      background: #e9e2d5
+    }
+
+    .space-image {
+      min-height: 620px;
+      overflow: hidden
+    }
+
+    .space-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center
+    }
+
+    .space-copy {
+      padding: 80px 7vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center
+    }
+
+    .space-copy h2 {
+      font-size: clamp(2.3rem, 4vw, 3.8rem);
+      margin: 14px 0 20px
+    }
+
+    .space-copy p {
+      color: var(--muted);
+      max-width: 500px
+    }
+
+    .space-mini {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 28px
+    }
+
+    .space-mini img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover
+    }
+
+    .gallery {
+      background: var(--paper)
+    }
+
+    .gallerygrid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-auto-rows: 230px;
+      gap: 9px
+    }
+
+    .galleryitem {
+      overflow: hidden;
+      position: relative
+    }
+
+    .galleryitem.gallerywide {
+      grid-row: span 2
+    }
+
+    .galleryitem img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .6s
+    }
+
+    .galleryitem:hover img {
+      transform: scale(1.045)
+    }
+
+    .reviews {
+      background: #eee6d5
+    }
+
+    .reviewgrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px
+    }
+
+    .review {
+      background: var(--paper);
+      padding: 30px;
+      border: 1px solid var(--line)
+    }
+
+    .stars {
+      color: var(--gold);
+      letter-spacing: 3px
+    }
+
+    .review p {
+      font: italic 1.03rem var(--serif);
+      margin: 16px 0;
+      color: #51463a
+    }
+
+    .review small {
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: .1em
+    }
+
+    .contact {
+      background: #1e3429;
+      color: #fff
+    }
+
+    .contactgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center
+    }
+
+    .contact h2 {
+      color: #fff;
+      margin: 12px 0 18px
+    }
+
+    .contact p,
+    .details div,
+    .details a {
+      color: #dce1d7
+    }
+
+    .details {
+      margin: 25px 0
+    }
+
+    .details div,
+    .details a {
+      padding: 8px 0;
+      display: block
+    }
+
+    .mapcard {
+      min-height: 370px;
+      padding: 26px;
+      display: flex;
+      align-items: flex-end;
+      background: linear-gradient(0deg, rgba(0, 0, 0, .65), transparent 70%), url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=80") center/cover
+    }
+
+    .mapinner {
+      background: rgba(17, 38, 29, .88);
+      padding: 22px;
+      width: 100%
+    }
+
+    .mapinner h3 {
+      font-size: 1.8rem
+    }
+
+    footer {
+      background: #14241c;
+      color: #bfc8bd;
+      padding: 55px 0 22px
+    }
+
+    .footgrid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px
+    }
+
+    footer h3 {
+      color: #fff;
+      font-size: 1.5rem;
+      margin-bottom: 12px
+    }
+
+    footer h4 {
+      color: var(--gold2);
+      font-size: .75rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 12px
+    }
+
+    footer a,
+    footer p {
+      font-size: .82rem;
+      display: block;
+      margin-bottom: 7px
+    }
+
+    .footlogo {
+      height: 65px;
+      width: auto;
+      margin-bottom: 12px
+    }
+
+    .bottom {
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      padding-top: 18px;
+      text-align: center;
+      font-size: .7rem;
+      color: #8e998d
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 21px;
+      bottom: 21px;
+      z-index: 90;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--green);
+      color: var(--gold2);
+      border: 1px solid var(--gold);
+      font-size: 1.35rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .25)
+    }
+
+    @media(max-width:900px) {
+      .navlinks {
+        display: none
+      }
+
+      .hamb {
+        display: block
+      }
+
+      .brand-name {
+        font-size: 1.3rem
+      }
+
+      header.open {
+        background: var(--cream);
+        color: var(--brown)
+      }
+
+      header.open .navlinks {
+        display: flex;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, .08)
+      }
+
+      header.open .navlinks a {
+        padding: 14px 20px;
+        border-top: 1px solid var(--line)
+      }
+
+      header.open .navcta {
+        margin: 8px 20px 15px;
+        text-align: center
+      }
+
+      .introgrid,
+      .contactgrid,
+      .bookinggrid,
+      .space-showcase {
+        grid-template-columns: 1fr
+      }
+
+      .featuregrid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .feature {
+        border-bottom: 1px solid var(--line)
+      }
+
+      .feature:nth-child(2) {
+        border-right: 0
+      }
+
+      .roomgrid,
+      .reviewgrid,
+      .menugrid {
+        grid-template-columns: 1fr
+      }
+
+      .gallerygrid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 210px
+      }
+
+      .galleryitem.gallerywide {
+        grid-column: span 2;
+        grid-row: auto
+      }
+
+      .space-image {
+        min-height: 440px
+      }
+
+      .space-copy {
+        padding: 60px 28px
+      }
+
+      .footgrid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .menufilters {
+        display: none
+      }
+
+      .menu-mobile-select {
+        display: block
+      }
+
+      .menubrowse {
+        display: block
+      }
+
+      .menunav {
+        margin-top: 18px
+      }
+    }
+
+    @media(max-width:600px) {
+      .container {
+        width: calc(100% - 24px)
+      }
+
+      .section {
+        padding: 60px 0
+      }
+
+      .sectionhead {
+        margin-bottom: 34px
+      }
+
+      .sectionhead p {
+        font-size: .88rem
+      }
+
+      .hero {
+        padding: 125px 0 48px;
+        min-height: 92svh
+      }
+
+      .hero-logo {
+        width: 78px;
+        height: 78px
+      }
+
+      .hero h1 {
+        font-size: 3rem
+      }
+
+      .hero p {
+        font-size: .92rem;
+        line-height: 1.55
+      }
+
+      .actions {
+        margin-top: 24px
+      }
+
+      .actions .btn {
+        width: 100%;
+        padding: 13px 18px
+      }
+
+      .introimg {
+        height: 360px
+      }
+
+      .featuregrid {
+        grid-template-columns: 1fr
+      }
+
+      .feature {
+        border-right: 0 !important
+      }
+
+      .gallerygrid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px
+      }
+
+      .galleryitem.gallerywide {
+        grid-column: auto
+      }
+
+      .space-image {
+        min-height: 330px
+      }
+
+      .space-copy {
+        padding: 48px 0
+      }
+
+      .space-mini img {
+        height: 145px
+      }
+
+      .room img {
+        height: 235px
+      }
+
+      .roombody {
+        padding: 22px
+      }
+
+      .roombottom {
+        align-items: flex-start;
+        gap: 15px
+      }
+
+      .formgrid {
+        grid-template-columns: 1fr
+      }
+
+      .field.full {
+        grid-column: auto
+      }
+
+      .bookingform {
+        padding: 22px 16px
+      }
+
+      .bookingform .btn {
+        font-size: .68rem;
+        line-height: 1.35;
+        white-space: normal
+      }
+
+      .footgrid {
+        grid-template-columns: 1fr
+      }
+
+      .brand img {
+        height: 46px
+      }
+
+      .brand-name {
+        font-size: 1.2rem
+      }
+
+      .menu {
+        overflow: hidden
+      }
+
+      .menu-mobile-select {
+        font-size: .88rem;
+        padding: 14px
+      }
+
+      .menustatus {
+        font-size: .68rem
+      }
+
+      .menunav {
+        display: grid;
+        grid-template-columns: 1fr 1fr
+      }
+
+      .menunav button {
+        width: 100%
+      }
+
+      .menucard {
+        padding: 18px 16px
+      }
+
+      .menucard h3 {
+        font-size: 1.55rem
+      }
+
+      .menuitem {
+        font-size: .82rem;
+        padding: 10px 0;
+        gap: 10px
+      }
+
+      .menuitem strong {
+        font-size: .8rem
+      }
+
+      .menudesc {
+        font-size: .66rem
+      }
+
+      .whatsapp {
+        width: 54px;
+        height: 54px;
+        right: 16px;
+        bottom: 16px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header">
+    <nav class="container">
+      <a class="brand" href="#home"><img src="logo-removebg-preview.png"
+          alt="Paradise Hotel & Restaurant logo"><span class="brand-name">Radha Kunj</span></a>
+      <div class="navlinks"><a href="#about">About</a><a href="#rooms">Stay</a><a href="#menu">Menu</a><a
+          href="#booking">Book a Room</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+      <button class="hamb" id="hamb">☰</button>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <img class="hero-logo" src="logo-removebg-preview.png" alt="Paradise logo">
+      <span class="eyebrow">Hotel · Restaurant · Pure Vegetarian</span>
+      <h1>Welcome to <span>Radha Kunj</span></h1>
+      <p>A warm, family-friendly destination on Indore–Ahmedabad Road, Hatod — bringing together pure vegetarian food,
+        comfortable stays and relaxed hospitality.</p>
+      <div class="actions"><a class="btn btn-gold" href="#booking">Book a Room</a><a class="btn btn-outline"
+          href="https://wa.me/919407124224" target="_blank">WhatsApp Us</a><a class="btn btn-outline" href="#menu">View
+          Menu</a></div>
+      <div class="note">Open daily · 11:30 AM – 11:55 PM</div>
+    </div>
+  </section>
+
+  <section class="section intro" id="about">
+    <div class="container introgrid">
+      <img class="introimg" src="d8.jpg" alt="Restaurant ambience">
+      <div class="introcopy"><span class="eyebrow">The Radha Kunj experience</span>
+        <h2>Good food, comfortable stays and a place to pause.</h2>
+        <p>Radha Kunj brings together a pure vegetarian kitchen, welcoming dining and comfortable accommodation in
+          Hatod.</p>
+        <p>Whether you are stopping for a meal, travelling through the Indore–Ahmedabad route or staying overnight, our
+          focus is simple: make the visit comfortable and memorable.</p>
+        <div class="signature">Welcome to Radha Kunj</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="space-showcase">
+    <div class="space-image"><img src="100895.jpg" alt="Radha Kunj restaurant interior"></div>
+    <div class="space-copy"><span class="eyebrow">Your Radha Kunj space</span>
+      <h2>A dining room designed to feel open, calm and welcoming.</h2>
+      <p>Natural light, warm pendant lighting, indoor greenery, soft olive seating and views of the surrounding fields
+        give Radha Kunj its character.</p>
+      <div class="space-mini"><img src="100897.jpg" alt="Radha Kunj lighting and dining area"><img
+          src="d13.jpg" alt="Radha Kunj greenery and seating"></div>
+    </div>
+  </section>
+
+  <section class="section features">
+    <div class="container">
+      <div class="sectionhead"><span class="eyebrow">Everything in one place</span>
+        <h2>Made for travellers & families</h2>
+        <p>A clear, comfortable experience from arrival to departure.</p>
+      </div>
+      <div class="featuregrid">
+        <article class="feature">
+          <div class="icon">✦</div>
+          <h3>Pure Veg Dining</h3>
+          <p>A completely vegetarian menu with Indian, Chinese, pizza, pasta, beverages and desserts.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">⌂</div>
+          <h3>Comfortable Stay</h3>
+          <p>A convenient place for travellers looking for a comfortable stop in Hatod.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">◌</div>
+          <h3>Family Friendly</h3>
+          <p>A relaxed setting for families, groups, celebrations and everyday meals.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">↗</div>
+          <h3>Easy to Reach</h3>
+          <p>Located on Indore–Ahmedabad Road, in front of Amrit Paper Mill, Village Hatod.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rooms" id="rooms">
+    <div class="container">
+      <div class="sectionhead"><span class="eyebrow">Stay with us</span>
+        <h2>Comfortable rooms for your journey</h2>
+        <p>Choose AC or non-AC in the booking form and send your request directly to WhatsApp.</p>
+      </div>
+      <div class="roomgrid">
+        <article class="room"><img src="rooms.jpg" alt="AC room">
+          <div class="roombody">
+            <h3>AC Room</h3>
+            <p>A comfortable option for guests who prefer air-conditioned accommodation.</p>
+            <div class="roomtags"><span>Air Conditioning</span><span>Comfortable bed</span><span>Family friendly</span>
+            </div>
+            <div class="roombottom"><strong>1950/-</strong><a class="btn btn-gold" href="#booking">Book</a></div>
+          </div>
+        </article>
+        <article class="room"><img src="rooms2.jpeg" alt="Non AC room">
+          <div class="roombody">
+            <h3>Non-AC Room</h3>
+            <p>A practical accommodation option for travellers looking for a simple stay.</p>
+            <div class="roomtags"><span>Comfortable</span><span>Clean interiors</span><span>Family friendly</span></div>
+            <div class="roombottom"><strong>1500/-</strong><a class="btn btn-gold" href="#booking">Book</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section menu" id="menu">
+    <div class="container">
+      <div class="sectionhead"><span class="eyebrow">Editable menu</span>
+        <h2>Our Food Menu</h2>
+      </div>
+      <div class="menubrowse"><select class="menu-mobile-select" id="menuSelect"
+          aria-label="Choose menu category"></select></div>
+      <div class="menufilters" id="menuFilters"></div>
+      <div class="menustatus" id="menuStatus"></div>
+      <div class="menugrid" id="menuGrid"></div>
+      <div class="menunav"><button type="button" id="prevMenu">← Previous</button><button type="button"
+          id="nextMenu">Next →</button></div>
+    </div>
+  </section>
+
+  <section class="section booking" id="booking">
+    <div class="container bookinggrid">
+      <div class="bookingintro"><span class="eyebrow">Room reservation</span>
+        <h2>Tell us what you need.</h2>
+        <p>Fill in the basic details. When you submit, WhatsApp will open with a ready-made booking enquiry containing
+          your information.</p>
+        <div class="bookingsteps">
+          <div><b>01</b> Enter your name & contact number</div>
+          <div><b>02</b> Select AC / Non-AC and number of guests</div>
+          <div><b>03</b> Add check-in, check-out and any request</div>
+          <div><b>04</b> Send the generated message on WhatsApp</div>
+        </div>
+      </div>
+      <form class="bookingform" id="bookingForm">
+        <div class="formgrid">
+          <div class="field"><label>Full Name *</label><input id="name" required placeholder="Your name"></div>
+          <div class="field"><label>Mobile Number *</label><input id="phone" required type="tel" inputmode="numeric"
+              placeholder="10-digit mobile"></div>
+          <div class="field"><label>Room Type *</label><select id="roomType" required>
+              <option value="">Select room</option>
+              <option>AC Room</option>
+              <option>Non-AC Room</option>
+            </select></div>
+          <div class="field"><label>No. of Rooms *</label><input id="roomsCount" required type="number" min="1"
+              value="1"></div>
+          <div class="field"><label>No. of Guests *</label><input id="guests" required type="number" min="1"
+              placeholder="Adults + children"></div>
+          <div class="field"><label>Check-in *</label><input id="checkin" required type="date"></div>
+          <div class="field"><label>Check-out *</label><input id="checkout" required type="date"></div>
+          <div class="field"><label>Arrival Time</label><input id="arrival" type="time"></div>
+          <div class="field full"><label>Special Request / Note</label><textarea id="noteField"
+              placeholder="Extra bed, late arrival, anything else..."></textarea></div>
+        </div>
+        <div class="formnote">This form sends an enquiry through WhatsApp. It does not automatically confirm
+          availability or payment.</div>
+        <button class="btn btn-gold" type="submit">Send Booking Enquiry on WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="banner">
+    <div class="container"><span class="eyebrow">A place to pause</span>
+      <h2>Good food. Easy stays. Warm hospitality.</h2>
+      <p>Make Radha Kunj part of your journey through Hatod.</p>
+    </div>
+  </section>
+
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="sectionhead"><span class="eyebrow">See Radha Kunj</span>
+        <h2>Moments worth remembering</h2>
+        <p>A collection of real Radha Kunj interiors, seating, lighting and views.</p>
+      </div>
+      <div class="gallerygrid">
+        <div class="galleryitem gallerywide"><img src="100895.jpg" alt="Radha Kunj main dining hall"></div>
+        <div class="galleryitem"><img src="d6.jpg" alt="Radha Kunj dining area at dusk"></div>
+        <div class="galleryitem"><img src="d8.jpg" alt="Radha Kunj booth seating and pendant lights"></div>
+        <div class="galleryitem"><img src="d10.jpg" alt="Radha Kunj window-side dining"></div>
+        <div class="galleryitem"><img src="d13.jpg" alt="Radha Kunj indoor plants and partition"></div>
+        <div class="galleryitem"><img src="100894.jpg" alt="Radha Kunj bright dining room"></div>
+        <div class="galleryitem"><img src="100896.jpg" alt="Radha Kunj long dining table"></div>
+        <div class="galleryitem"><img src="100897.jpg" alt="Radha Kunj feature lighting"></div>
+        <div class="galleryitem"><img src="d5.jpg" alt="Radha Kunj dining table and reception area"></div>
+        <div class="galleryitem"><img src="d14.jpg" alt="Radha Kunj interior and atrium"></div>
+        <div class="galleryitem"><img src="rooms2.jpeg" alt="Radha Kunj interior and atrium"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="sectionhead"><span class="eyebrow">Guest experiences</span>
+        <h2>What our guests remember</h2>
+      </div>
+      <div class="reviewgrid">
+        <article class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Literally, I just forgot to click the photosSo busy, so I was eating food It was all very delicious If you
+            stop here, you must try the food Pick any item U guarantee u won’t deny to eat… Soup to dessert all awesome
+            and amazing.. Cleanliness at its best…road touch property and yes very fast service…”</p><small>Verified
+            guest ·
+            Google</small>
+        </article>
+        <article class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Food is really awesome. I am a traveller Continuously travelling from Mumbai to Nepal After a very long
+            long journey, I can say that I got some really nice and home-made tasty food. Appreciate it. Thank you so
+            much.”</p><small>Verified guest ·
+            Google</small>
+        </article>
+        <article class="review">
+          <div class="stars">★★★★★</div>
+          <p>“One of the best food place to visit. 🚗🚗Have amazing food and quality.🍝🍜🍛 You can have a so cozy
+            atmosphere🍃🍃🪟 and have a very pleasant staff .♥️♥️ Loved the place a food too!!😍😍🤩”</p><small>Verified
+            guest ·
+            Google</small>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container contactgrid">
+      <div><span class="eyebrow">Come visit</span>
+        <h2>Let’s make your next stop comfortable.</h2>
+        <p>For table reservations, room enquiries or general questions, call or WhatsApp us directly.</p>
+        <div class="details"><a href="tel:9407124224">☎ 9407124224</a><a href="https://wa.me/919407124224"
+            target="_blank">◉ WhatsApp Radha Kunj</a>
+          <div>⌖ Indore–Ahmedabad Road, in front of Amrit Paper Mill, Village Hatod</div>
+          <div>◷ Open daily · 11:30 AM – 11:55 PM</div>
+        </div>
+      </div>
+      <div class="mapcard">
+        <div class="mapinner">
+          <h3>Find us in Hatod</h3>
+          <p>Indore–Ahmedabad Road · In front of Amrit Paper Mill · Village Hatod</p><a class="btn btn-gold"
+            href="https://maps.app.goo.gl/nHwWmLfH4u315anW8">Open Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footgrid">
+        <div><img class="footlogo" src="logo-removebg-preview.png" alt="Paradise logo">
+          <h3>Radha Kunj</h3>
+          <p>Hotel & Restaurant · Pure Vegetarian</p>
+          <p>Indore–Ahmedabad Road, Hatod</p>
+        </div>
+        <div>
+          <h4>Explore</h4><a href="#about">About</a><a href="#rooms">Stay</a><a href="#menu">Full Menu</a><a
+            href="#booking">Book a Room</a>
+        </div>
+        <div>
+          <h4>Contact</h4><a href="tel:9407124224">9407124224</a><a href="https://wa.me/919407124224"
+            target="_blank">WhatsApp</a>
+          <p>Open daily · 11:30 AM – 11:55 PM</p>
+        </div>
+      </div>
+      <div class="bottom">© <span id="year"></span> Radha Kunj Hotel & Restaurant · Hatod, Indore</div>
+    </div>
+  </footer>
+  <a class="whatsapp" href="https://wa.me/919407124224" target="_blank" aria-label="WhatsApp">◉</a>
+
+  <script>
+    /*
+    =========================================================
+    RADHA KUNJ MENU DATA
+    =========================================================
+    THIS is the part you edit in the future.
+    Change a price, rename an item, add an item, or create
+    a new category here. The website automatically redraws
+    the menu — no Photoshop/PDF/page-image editing needed.
+    
+    Format:
+    {category:"Category Name", items:[
+      {name:"Item name", price:123, desc:"Optional description"}
+    ]}
+    */
+    const MENU = [
+      {
+        category: "Let's Start", items: [
+          { name: "Papad Roasted / Fry", price: 20 }, { name: "Papad Fry / Roasted Masala", price: 30 }, { name: "Peanut Chaat", price: 79, desc: "Salted peanut with onion, cucumber & tomato" }, { name: "Peanut Garlic Fry", price: 89, desc: "Butter fried peanut and garlic" }, { name: "Chana Roast", price: 89, desc: "Deep fried chickpeas" }, { name: "French Fries", price: 99 }, { name: "Peri Peri Fries", price: 109 }, { name: "Butter Milk", price: 39 }, { name: "Lassi", price: 69 }, { name: "Water Bottle", price: "MRP" }, { name: "Fresh Lime Soda / Water", price: 69 }]
+      },
+      {
+        category: "Your Green Garden", items: [
+          { name: "Healthy Green Salad", price: 59, desc: "The ever green garden salad" }, { name: "Onion Salad", price: 39, desc: "Everyone's regular choice" }, { name: "Punjabi Cuts", price: 59, desc: "Finger cut green salad" }, { name: "Sprout Salad", price: 99, desc: "Mixture of tomato, onion, cucumber & sprouts" }, { name: "Corn Chaat", price: 139, desc: "Diced cut bell pepper & corn tossed in olive oil, sprinkled with white & black pepper" }]
+      },
+      {
+        category: "Soup", items: [
+          { name: "Tomato Soup", price: 99, desc: "Roasted plum tomato soup served with homemade bread croutons and cream" }, { name: "Manchow Soup", price: 99, desc: "Spicy Indo Chinese soup with vegetable & crispy noodles" }, { name: "Hot & Sour Soup", price: 99, desc: "A tangy spicy soup from Mandarin & Sichuan province of China" }, { name: "Veg Clear Soup", price: 99, desc: "Vegetable clear soup" }, { name: "Sweet Corn Soup", price: 99, desc: "Kid's special sweet corn soup" }, { name: "Lemon Coriander Soup", price: 99, desc: "Lemon mix with coriander in Chinese style" }]
+      },
+      {
+        category: "All About Dahi", items: [
+          { name: "Plain Curd", price: 49 }, { name: "Boondi Raita", price: 69 }, { name: "Mix Veg Raita", price: 69 }, { name: "Mix Fruit Raita", price: 99 }, { name: "Pineapple Raita", price: 99 }, { name: "Cucumber Raita", price: 69 }]
+      },
+      {
+        category: "Kebabon Ke Shehar Se", items: [
+          { name: "Gauloti Kabab", price: 189 }, { name: "Dahi Kebab", price: 189 }, { name: "Shammi Kebab", price: 189 }, { name: "Hara Bhara Kebab", price: 189 }]
+      },
+      {
+        category: "Oyela Oyela Koyla — Tandoor Starter", items: [
+          { name: "Paneer Tikka", price: 229 }, { name: "Paneer Peshawari Tikka", price: 229 }, { name: "Paneer Haryali", price: 229 }, { name: "Paneer Chingari", price: 229 }, { name: "Paneer Pudhina Tikka", price: 229 }, { name: "Paneer Pahadi Tikka", price: 229 }, { name: "Paneer Achari Tikka", price: 229 }, { name: "Veg Seekh Kebab", price: 189 }, { name: "Cheese Chilly Onion Seekh Kebab", price: 219 }, { name: "Makka Malai Seekh Kebab", price: 219 }, { name: "Methi Papad Kebab", price: 189 }, { name: "Tandoori Platter", price: 289 }]
+      },
+      { category: "Tandoor Starter", items: [{ name: "Aloo Nazakat", price: 199 }, { name: "Kaju Seekh Kebab", price: 229 }] },
+      {
+        category: "Wohi Jo Hum China Se Laye", items: [
+          { name: "Hakka Noodles", price: 179 }, { name: "Schezwan Noodles", price: 189 }, { name: "Chilly Garlic Noodles", price: 199 }, { name: "Burnt Garlic Noodles", price: 199 }, { name: "Fried Rice", price: 179 }, { name: "Schezwan Fried Rice", price: 189 }, { name: "Burnt Garlic Fried Rice", price: 199 }, { name: "Chilly Garlic Fried Rice", price: 199 }]
+      },
+      {
+        category: "It's Chings By Chinese", items: [
+          { name: "Veg Manchurian", price: 179, desc: "Vegetable dumpling tossed in soya & garlic sauce" }, { name: "Honey Chilly Potato", price: 179, desc: "Crispy fried potato in honey and chilly sauce" }, { name: "Veg Kothe", price: 179, desc: "Crispy fried vegetable ball in honey and plum sauce" }, { name: "Crispy Veg", price: 179, desc: "Deep fried veg in Schezwan sauce" }, { name: "Crispy Corn", price: 179, desc: "Fried corn in salt and pepper" }, { name: "Spring Roll", price: 189, desc: "Stir fried vegetable wrapped in sheet & deep fried" }, { name: "Golden Coin", price: 189, desc: "Piece of bread deep fried with topping of mix veg & sesame" }, { name: "Veg Lollipop", price: 189, desc: "Finely chopped vegetable deep fried & topped with garlic sauce" }]
+      },
+      {
+        category: "The Garlic Loaf", items: [
+          { name: "Garlic Bread", price: 109 }, { name: "Cheese Chilli Garlic Toasty", price: 99 }, { name: "Exotic Garlic Bread", price: 189 }, { name: "Cheese Garlic Bread", price: 129 }]
+      },
+      {
+        category: "Pizzeria", items: [
+          { name: "Cheese Pizza", price: 229, desc: "Regular cheese pizza with pizza sauce" }, { name: "Vegetable Pizza", price: 219, desc: "Fresh vegetable pizza with exotic veggie" }, { name: "BBQ Pizza", price: 219, desc: "Barbeque paneer pizza" }, { name: "Paneer / Mushroom Pizza", price: 229, desc: "Cottage cheese / mushroom in cheese pizza" }, { name: "Guest Choice Pizza", price: 229 }]
+      },
+      {
+        category: "Pasta La Vista", items: [
+          { name: "White Sauce Pasta", price: 199 }, { name: "Red Sauce Pasta", price: 199 }, { name: "Pink Sauce Pasta", price: 199 }, { name: "Baked Pasta", price: 229 }]
+      },
+      {
+        category: "Sandwich", items: [
+          { name: "Veg Grilled Sandwich", price: 49 }, { name: "Masala Sandwich", price: 49 }, { name: "Veg Cheese Sandwich", price: 59 }, { name: "Veg & Cheese Open Toast", price: 89 }, { name: "Veg Club Sandwich", price: 149 }, { name: "Paneer Tikka Sandwich", price: 169 }, { name: "Brownie Nutella Sandwich", price: 169 }, { name: "Cross Raw Sandwich", price: 169 }, { name: "Indori Sev Sandwich", price: 79 }, { name: "Corn Cheese Sandwich", price: 89 }, { name: "Sabse Accha", price: 49, desc: "Bombay Kaccha" }]
+      },
+      {
+        category: "Validitate China", items: [
+          { name: "Chilly Paneer", price: 229, desc: "Batter fried cottage cheese tossed with green chillies tossed with hot chilly soya sauce" }, { name: "Paneer 65", price: 229, desc: "Batter fried cottage cheese tossed in south Indian style" }, { name: "Chilly Mushroom / Baby Corn", price: 229, desc: "Batter fried mushroom / babycorn tossed with green chillies and hot chilly soya sauce" }, { name: "Paneer Black Pepper", price: 229, desc: "Cottage cheese tossed in soya sauce, Schezwan sauce and black pepper" }, { name: "Paneer Mexican Roll", price: 229, desc: "Thin slice of paneer stuffed with mushroom ginger garlic paste with Schezwan sauce" }, { name: "Jalapeno Cheese Cigar Roll", price: 229, desc: "Cheese and jalapeno wrap in sheet & deep fried" }, { name: "Paneer Satay", price: 229 }, { name: "Paneer Hot Garlic Sauce", price: 229 }, { name: "Paneer Crispy", price: 239 }, { name: "Paneer Hong Kong", price: 239 }]
+      },
+      {
+        category: "Sabji Hellioni", items: [
+          { name: "Veg Kolhapuri", price: 189, desc: "Diced cut vegetable cooked in spicy masala gravy" }, { name: "Subji Diwani Handi", price: 189, desc: "Diamond cut vegetable cooked in brown gravy" }, { name: "Matar Mushroom", price: 199, desc: "Green peas and mushroom cooked in brown onion gravy" }, { name: "Dum Aloo Kashmiri", price: 199, desc: "Boiled potato cooked with paneer mawa red gravy" }, { name: "Lehsuni Palak", price: 189, desc: "Spinach gravy cooked with chopped garlic" }, { name: "Malai Kofta", price: 219, desc: "Mawa and cottage cheese kofta cooked in white gravy" }, { name: "Nargisi Kofta", price: 189, desc: "Mix veg kofta cooked in yellow gravy" }, { name: "Bhindi Masala", price: 179, desc: "Diced cut bhindi cooked in home made spices" }, { name: "Aloo Gobhi Adraki", price: 179, desc: "Potato cauliflower sauteed in chopped masala & ginger" }, { name: "Kaju Curry", price: 229, desc: "Cashewnut's cooked in red gravy" }, { name: "Kaju Curry", price: 229, desc: "Cashewnut's cooked in shahi white gravy" }, { name: "Sev Tamatar", price: 179, desc: "Indori sev cooked brown gravy" }, { name: "Pindi Chole", price: 189, desc: "Chickpea's cooked in Punjabi style" }, { name: "Veg Kofta", price: 219 }, { name: "Navratan Korma", price: 239 }, { name: "Veg Patiala", price: 219 }, { name: "Cheese Kofta", price: 249 }, { name: "Dudh Sev", price: 179 }]
+      },
+      {
+        category: "Some Cottage Cheese — Paneer", items: [
+          { name: "Butter Paneer Masala", price: 229 }, { name: "Paneer Tikka Masala", price: 229 }, { name: "Kadhai Paneer", price: 229 }, { name: "Paneer Bell Pepper", price: 229 }, { name: "Paneer Chatpata", price: 229 }, { name: "Paneer Hara", price: 229 }, { name: "Paneer Sandwich", price: 229 }, { name: "Paneer Lababdar", price: 249 }, { name: "Paneer Angara", price: 269 }, { name: "Paneer Kholapuri", price: 249 }, { name: "Kaju Paneer", price: 279 }, { name: "Cheese Butter Masala", price: 289 }, { name: "Paneer Makhanwala", price: 249 }, { name: "Paneer Pasanda", price: 289 }, { name: "Paneer Rajwadi", price: 269 }, { name: "Paneer Makhani Bhurji", price: 269 }, { name: "Paneer Patiala", price: 279 }, { name: "Paneer Maharaja", price: 269 }]
+      },
+      {
+        category: "Queen Of Food Times — Dal", items: [
+          { name: "Dal Fry", price: 169 }, { name: "Dal Tadka", price: 169 }, { name: "Dal Palak", price: 169 }, { name: "Dal Lehsuni", price: 169 }, { name: "Dal Makhni", price: 169 }, { name: "Makhani E Dum", price: 179 }]
+      },
+      {
+        category: "Bread Basket", items: [
+          { name: "Tandoori Roti Plain", price: 20 }, { name: "Tandoori Roti Butter", price: 20 }, { name: "Laccha Paratha", price: 35 }, { name: "Pudina Paratha", price: 40 }, { name: "Plain Naan", price: 40 }, { name: "Butter Naan", price: 40 }, { name: "Garlic Naan", price: 45 }, { name: "Chilli Garlic Naan", price: 45 }, { name: "Onion Chilli Garlic Naan", price: 45 }, { name: "Biscuit Roti", price: 40 }, { name: "Missi Roti", price: 30 }, { name: "Stuffed Paratha", price: 45 }, { name: "Bread Basket", price: 169 }]
+      },
+      {
+        category: "It's An Advice To Take Rice", items: [
+          { name: "Steam Rice", price: 159 }, { name: "Jeera Rice", price: 159 }, { name: "Chilli Onion Rice", price: 169 }, { name: "Green Peas Pulav", price: 169 }, { name: "Tawa Pulav", price: 169 }, { name: "Butter Khichdi", price: 169 }, { name: "Veg Biryani", price: 199 }, { name: "Hyderabadi Biryani", price: 229 }]
+      },
+      {
+        category: "Mocktails", items: [
+          { name: "Fruit Punch", price: 149 }, { name: "Kiwi Margarita", price: 149 }, { name: "Virgin Mojito", price: 89 }, { name: "Blue Lagoon", price: 79 }, { name: "Pina Colada", price: 139 }, { name: "Orange Blossom", price: 129 }, { name: "Cold Coffee", price: 119 }, { name: "Cold Coffee with Ice Cream", price: 139 }, { name: "Choice of Shake", price: 119 }, { name: "Oreo Shake", price: 139 }, { name: "Vanilla", price: 119 }, { name: "Butter Scotch", price: 119 }, { name: "Chocolate", price: 119 }, { name: "Hot Chocolate", price: 99 }]
+      },
+      {
+        category: "Sugar Tooth", items: [
+          { name: "Gulab Jamun", price: 59 }, { name: "Gulab Jamun with Rabdi", price: 99 }, { name: "Jamunilla", price: 89 }, { name: "Mango Rabdi", price: 99 }, { name: "Shahi Tukda", price: 99 }, { name: "Sizzler Brownie with Ice Cream", price: 179 }]
+      },
+      {
+        category: "Him Clim", items: [
+          { name: "Vanilla", price: 59 }, { name: "Chocolate", price: 59 }, { name: "Alfonso", price: 69 }, { name: "Strawberry", price: 69 }, { name: "Golden Magic", price: 69 }, { name: "Pan", price: 69 }]
+      }
+    ];
+
+    const menuFilters = document.getElementById('menuFilters'), menuGrid = document.getElementById('menuGrid'), menuSelect = document.getElementById('menuSelect'), menuStatus = document.getElementById('menuStatus'), prevMenu = document.getElementById('prevMenu'), nextMenu = document.getElementById('nextMenu');
+    let menuIndex = 0;
+    function money(v) { return typeof v === 'number' ? '₹' + v : v }
+    function renderMenu(index = menuIndex) {
+      menuIndex = Math.max(0, Math.min(index, MENU.length - 1));
+      const c = MENU[menuIndex];
+      menuGrid.innerHTML = `<article class="menucard"><h3>${c.category}</h3>${c.items.map(i => `<div class="menuitem"><div><span>${i.name}</span>${i.desc ? `<span class="menudesc">${i.desc}</span>` : ''}</div><strong>${money(i.price)}</strong></div>`).join('')}</article>`;
+      menuStatus.textContent = `Category ${menuIndex + 1} of ${MENU.length}`;
+      document.querySelectorAll('.menufilter').forEach((b, i) => b.classList.toggle('active', i === menuIndex));
+      if (menuSelect) menuSelect.value = String(menuIndex);
+      prevMenu.disabled = menuIndex === 0; nextMenu.disabled = menuIndex === MENU.length - 1;
+      prevMenu.style.opacity = menuIndex === 0 ? .45 : 1; nextMenu.style.opacity = menuIndex === MENU.length - 1 ? .45 : 1;
+    }
+    menuFilters.innerHTML = MENU.map((x, i) => `<button type="button" class="menufilter ${i === 0 ? 'active' : ''}" data-index="${i}">${x.category}</button>`).join('');
+    menuSelect.innerHTML = MENU.map((x, i) => `<option value="${i}">${x.category}</option>`).join('');
+    menuFilters.addEventListener('click', e => { if (e.target.classList.contains('menufilter')) { renderMenu(Number(e.target.dataset.index)); document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' }) } });
+    menuSelect.addEventListener('change', e => renderMenu(Number(e.target.value)));
+    prevMenu.addEventListener('click', () => renderMenu(menuIndex - 1));
+    nextMenu.addEventListener('click', () => renderMenu(menuIndex + 1));
+    renderMenu(0);
+
+    const header = document.getElementById('header'), hamb = document.getElementById('hamb');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 35));
+    hamb.addEventListener('click', () => header.classList.toggle('open'));
+    document.querySelectorAll('.navlinks a').forEach(a => a.addEventListener('click', () => header.classList.remove('open')));
+
+    document.getElementById('bookingForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const roomType = document.getElementById('roomType').value;
+      const rooms = document.getElementById('roomsCount').value;
+      const guests = document.getElementById('guests').value;
+      const checkin = document.getElementById('checkin').value;
+      const checkout = document.getElementById('checkout').value;
+      const arrival = document.getElementById('arrival').value || 'Not specified';
+      const note = document.getElementById('noteField').value.trim() || 'None';
+      const msg =
+        `*RADHA KUNJ — ROOM BOOKING ENQUIRY*
+
+Name: ${name}
+Contact: ${phone}
+Room Type: ${roomType}
+No. of Rooms: ${rooms}
+No. of Guests: ${guests}
+Check-in: ${checkin}
+Check-out: ${checkout}
+Arrival Time: ${arrival}
+Special Request: ${note}
+
+Please confirm room availability and the applicable tariff. Thank you!`;
+      window.open('https://wa.me/919407124224?text=' + encodeURIComponent(msg), '_blank');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
