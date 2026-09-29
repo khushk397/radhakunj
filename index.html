@@ -1434,88 +1434,240 @@
     const MENU = [
       {
         category: "Let's Start", items: [
-          { name: "Papad Roasted / Fry", price: 20 }, { name: "Papad Fry / Roasted Masala", price: 30 }, { name: "Peanut Chaat", price: 79, desc: "Salted peanut with onion, cucumber & tomato" }, { name: "Peanut Garlic Fry", price: 89, desc: "Butter fried peanut and garlic" }, { name: "Chana Roast", price: 89, desc: "Deep fried chickpeas" }, { name: "French Fries", price: 99 }, { name: "Peri Peri Fries", price: 109 }, { name: "Butter Milk", price: 39 }, { name: "Lassi", price: 69 }, { name: "Water Bottle", price: "MRP" }, { name: "Fresh Lime Soda / Water", price: 69 }]
+          { name: "Papad Roasted / Fry", price: 20 },
+          { name: "Papad Fry / Roasted Masala", price: 30 },
+          { name: "Peanut Chaat", price: 99 },
+          { name: "Peanut Garlic Fry", price: 109 },
+          { name: "Chana Roast", price: 119 },
+          { name: "French Fries", price: 109 },
+          { name: "Peri Peri Fries", price: 119 },
+          { name: "Butter Milk", price: 45 },
+          { name: "Lassi", price: 79 },
+          { name: "Water Bottle", price: "MRP" },
+          { name: "Fresh Lime Soda / Water", price: 79 }
+        ]
       },
       {
         category: "Your Green Garden", items: [
-          { name: "Healthy Green Salad", price: 59, desc: "The ever green garden salad" }, { name: "Onion Salad", price: 39, desc: "Everyone's regular choice" }, { name: "Punjabi Cuts", price: 59, desc: "Finger cut green salad" }, { name: "Sprout Salad", price: 99, desc: "Mixture of tomato, onion, cucumber & sprouts" }, { name: "Corn Chaat", price: 139, desc: "Diced cut bell pepper & corn tossed in olive oil, sprinkled with white & black pepper" }]
+          { name: "Healthy Green Salad", price: 69 },
+          { name: "Onion Salad", price: 39 },
+          { name: "Punjabi Cuts", price: 69 },
+          { name: "Corn Chaat", price: 139 }
+        ]
       },
       {
         category: "Soup", items: [
-          { name: "Tomato Soup", price: 99, desc: "Roasted plum tomato soup served with homemade bread croutons and cream" }, { name: "Manchow Soup", price: 99, desc: "Spicy Indo Chinese soup with vegetable & crispy noodles" }, { name: "Hot & Sour Soup", price: 99, desc: "A tangy spicy soup from Mandarin & Sichuan province of China" }, { name: "Veg Clear Soup", price: 99, desc: "Vegetable clear soup" }, { name: "Sweet Corn Soup", price: 99, desc: "Kid's special sweet corn soup" }, { name: "Lemon Coriander Soup", price: 99, desc: "Lemon mix with coriander in Chinese style" }]
+          { name: "Tomato Soup", price: 99 },
+          { name: "Manchow Soup", price: 119 },
+          { name: "Hot & Sour Soup", price: 109 },
+          { name: "Veg Clear Soup", price: 99 },
+          { name: "Lemon Coriander Soup", price: 99 }
+        ]
       },
       {
         category: "All About Dahi", items: [
-          { name: "Plain Curd", price: 49 }, { name: "Boondi Raita", price: 69 }, { name: "Mix Veg Raita", price: 69 }, { name: "Mix Fruit Raita", price: 99 }, { name: "Pineapple Raita", price: 99 }, { name: "Cucumber Raita", price: 69 }]
-      },
-      {
-        category: "Kebabon Ke Shehar Se", items: [
-          { name: "Gauloti Kabab", price: 189 }, { name: "Dahi Kebab", price: 189 }, { name: "Shammi Kebab", price: 189 }, { name: "Hara Bhara Kebab", price: 189 }]
+          { name: "Plain Curd", price: 59 },
+          { name: "Boondi Raita", price: 89 },
+          { name: "Mix Veg Raita", price: 79 },
+          { name: "Mix Fruit Raita", price: 109 },
+          { name: "Pineapple Raita", price: 109 },
+          { name: "Aloo Pudhina Raita", price: 99 }
+        ]
       },
       {
         category: "Oyela Oyela Koyla — Tandoor Starter", items: [
-          { name: "Paneer Tikka", price: 229 }, { name: "Paneer Peshawari Tikka", price: 229 }, { name: "Paneer Haryali", price: 229 }, { name: "Paneer Chingari", price: 229 }, { name: "Paneer Pudhina Tikka", price: 229 }, { name: "Paneer Pahadi Tikka", price: 229 }, { name: "Paneer Achari Tikka", price: 229 }, { name: "Veg Seekh Kebab", price: 189 }, { name: "Cheese Chilly Onion Seekh Kebab", price: 219 }, { name: "Makka Malai Seekh Kebab", price: 219 }, { name: "Methi Papad Kebab", price: 189 }, { name: "Tandoori Platter", price: 289 }]
-      },
-      { category: "Tandoor Starter", items: [{ name: "Aloo Nazakat", price: 199 }, { name: "Kaju Seekh Kebab", price: 229 }] },
-      {
-        category: "Wohi Jo Hum China Se Laye", items: [
-          { name: "Hakka Noodles", price: 179 }, { name: "Schezwan Noodles", price: 189 }, { name: "Chilly Garlic Noodles", price: 199 }, { name: "Burnt Garlic Noodles", price: 199 }, { name: "Fried Rice", price: 179 }, { name: "Schezwan Fried Rice", price: 189 }, { name: "Burnt Garlic Fried Rice", price: 199 }, { name: "Chilly Garlic Fried Rice", price: 199 }]
-      },
-      {
-        category: "It's Chings By Chinese", items: [
-          { name: "Veg Manchurian", price: 179, desc: "Vegetable dumpling tossed in soya & garlic sauce" }, { name: "Honey Chilly Potato", price: 179, desc: "Crispy fried potato in honey and chilly sauce" }, { name: "Veg Kothe", price: 179, desc: "Crispy fried vegetable ball in honey and plum sauce" }, { name: "Crispy Veg", price: 179, desc: "Deep fried veg in Schezwan sauce" }, { name: "Crispy Corn", price: 179, desc: "Fried corn in salt and pepper" }, { name: "Spring Roll", price: 189, desc: "Stir fried vegetable wrapped in sheet & deep fried" }, { name: "Golden Coin", price: 189, desc: "Piece of bread deep fried with topping of mix veg & sesame" }, { name: "Veg Lollipop", price: 189, desc: "Finely chopped vegetable deep fried & topped with garlic sauce" }]
-      },
-      {
-        category: "The Garlic Loaf", items: [
-          { name: "Garlic Bread", price: 109 }, { name: "Cheese Chilli Garlic Toasty", price: 99 }, { name: "Exotic Garlic Bread", price: 189 }, { name: "Cheese Garlic Bread", price: 129 }]
+          { name: "Paneer Tikka", price: 289 },
+          { name: "Paneer Peshawari Tikka", price: 289 },
+          { name: "Paneer Chingari", price: 289 },
+          { name: "Paneer Pudhina Tikka", price: 289 },
+          { name: "Paneer Achari Tikka", price: 289 },
+          { name: "Veg Seekh Kebab", price: 259 },
+          { name: "Cheese Chilly Onion Seekh Kebab", price: 269 },
+          { name: "Tandoori Platter", price: 449 }
+        ]
       },
       {
-        category: "Pizzeria", items: [
-          { name: "Cheese Pizza", price: 229, desc: "Regular cheese pizza with pizza sauce" }, { name: "Vegetable Pizza", price: 219, desc: "Fresh vegetable pizza with exotic veggie" }, { name: "BBQ Pizza", price: 219, desc: "Barbeque paneer pizza" }, { name: "Paneer / Mushroom Pizza", price: 229, desc: "Cottage cheese / mushroom in cheese pizza" }, { name: "Guest Choice Pizza", price: 229 }]
-      },
-      {
-        category: "Pasta La Vista", items: [
-          { name: "White Sauce Pasta", price: 199 }, { name: "Red Sauce Pasta", price: 199 }, { name: "Pink Sauce Pasta", price: 199 }, { name: "Baked Pasta", price: 229 }]
-      },
-      {
-        category: "Sandwich", items: [
-          { name: "Veg Grilled Sandwich", price: 49 }, { name: "Masala Sandwich", price: 49 }, { name: "Veg Cheese Sandwich", price: 59 }, { name: "Veg & Cheese Open Toast", price: 89 }, { name: "Veg Club Sandwich", price: 149 }, { name: "Paneer Tikka Sandwich", price: 169 }, { name: "Brownie Nutella Sandwich", price: 169 }, { name: "Cross Raw Sandwich", price: 169 }, { name: "Indori Sev Sandwich", price: 79 }, { name: "Corn Cheese Sandwich", price: 89 }, { name: "Sabse Accha", price: 49, desc: "Bombay Kaccha" }]
-      },
-      {
-        category: "Validitate China", items: [
-          { name: "Chilly Paneer", price: 229, desc: "Batter fried cottage cheese tossed with green chillies tossed with hot chilly soya sauce" }, { name: "Paneer 65", price: 229, desc: "Batter fried cottage cheese tossed in south Indian style" }, { name: "Chilly Mushroom / Baby Corn", price: 229, desc: "Batter fried mushroom / babycorn tossed with green chillies and hot chilly soya sauce" }, { name: "Paneer Black Pepper", price: 229, desc: "Cottage cheese tossed in soya sauce, Schezwan sauce and black pepper" }, { name: "Paneer Mexican Roll", price: 229, desc: "Thin slice of paneer stuffed with mushroom ginger garlic paste with Schezwan sauce" }, { name: "Jalapeno Cheese Cigar Roll", price: 229, desc: "Cheese and jalapeno wrap in sheet & deep fried" }, { name: "Paneer Satay", price: 229 }, { name: "Paneer Hot Garlic Sauce", price: 229 }, { name: "Paneer Crispy", price: 239 }, { name: "Paneer Hong Kong", price: 239 }]
-      },
-      {
-        category: "Sabji Hellioni", items: [
-          { name: "Veg Kolhapuri", price: 189, desc: "Diced cut vegetable cooked in spicy masala gravy" }, { name: "Subji Diwani Handi", price: 189, desc: "Diamond cut vegetable cooked in brown gravy" }, { name: "Matar Mushroom", price: 199, desc: "Green peas and mushroom cooked in brown onion gravy" }, { name: "Dum Aloo Kashmiri", price: 199, desc: "Boiled potato cooked with paneer mawa red gravy" }, { name: "Lehsuni Palak", price: 189, desc: "Spinach gravy cooked with chopped garlic" }, { name: "Malai Kofta", price: 219, desc: "Mawa and cottage cheese kofta cooked in white gravy" }, { name: "Nargisi Kofta", price: 189, desc: "Mix veg kofta cooked in yellow gravy" }, { name: "Bhindi Masala", price: 179, desc: "Diced cut bhindi cooked in home made spices" }, { name: "Aloo Gobhi Adraki", price: 179, desc: "Potato cauliflower sauteed in chopped masala & ginger" }, { name: "Kaju Curry", price: 229, desc: "Cashewnut's cooked in red gravy" }, { name: "Kaju Curry", price: 229, desc: "Cashewnut's cooked in shahi white gravy" }, { name: "Sev Tamatar", price: 179, desc: "Indori sev cooked brown gravy" }, { name: "Pindi Chole", price: 189, desc: "Chickpea's cooked in Punjabi style" }, { name: "Veg Kofta", price: 219 }, { name: "Navratan Korma", price: 239 }, { name: "Veg Patiala", price: 219 }, { name: "Cheese Kofta", price: 249 }, { name: "Dudh Sev", price: 179 }]
-      },
-      {
-        category: "Some Cottage Cheese — Paneer", items: [
-          { name: "Butter Paneer Masala", price: 229 }, { name: "Paneer Tikka Masala", price: 229 }, { name: "Kadhai Paneer", price: 229 }, { name: "Paneer Bell Pepper", price: 229 }, { name: "Paneer Chatpata", price: 229 }, { name: "Paneer Hara", price: 229 }, { name: "Paneer Sandwich", price: 229 }, { name: "Paneer Lababdar", price: 249 }, { name: "Paneer Angara", price: 269 }, { name: "Paneer Kholapuri", price: 249 }, { name: "Kaju Paneer", price: 279 }, { name: "Cheese Butter Masala", price: 289 }, { name: "Paneer Makhanwala", price: 249 }, { name: "Paneer Pasanda", price: 289 }, { name: "Paneer Rajwadi", price: 269 }, { name: "Paneer Makhani Bhurji", price: 269 }, { name: "Paneer Patiala", price: 279 }, { name: "Paneer Maharaja", price: 269 }]
-      },
-      {
-        category: "Queen Of Food Times — Dal", items: [
-          { name: "Dal Fry", price: 169 }, { name: "Dal Tadka", price: 169 }, { name: "Dal Palak", price: 169 }, { name: "Dal Lehsuni", price: 169 }, { name: "Dal Makhni", price: 169 }, { name: "Makhani E Dum", price: 179 }]
-      },
-      {
-        category: "Bread Basket", items: [
-          { name: "Tandoori Roti Plain", price: 20 }, { name: "Tandoori Roti Butter", price: 20 }, { name: "Laccha Paratha", price: 35 }, { name: "Pudina Paratha", price: 40 }, { name: "Plain Naan", price: 40 }, { name: "Butter Naan", price: 40 }, { name: "Garlic Naan", price: 45 }, { name: "Chilli Garlic Naan", price: 45 }, { name: "Onion Chilli Garlic Naan", price: 45 }, { name: "Biscuit Roti", price: 40 }, { name: "Missi Roti", price: 30 }, { name: "Stuffed Paratha", price: 45 }, { name: "Bread Basket", price: 169 }]
-      },
-      {
-        category: "It's An Advice To Take Rice", items: [
-          { name: "Steam Rice", price: 159 }, { name: "Jeera Rice", price: 159 }, { name: "Chilli Onion Rice", price: 169 }, { name: "Green Peas Pulav", price: 169 }, { name: "Tawa Pulav", price: 169 }, { name: "Butter Khichdi", price: 169 }, { name: "Veg Biryani", price: 199 }, { name: "Hyderabadi Biryani", price: 229 }]
+        category: "Kebabon Ke Shehar Se", items: [
+          { name: "Hara Bhara Kebab", price: 229 },
+          { name: "Dahi Kebab", price: 229 }
+        ]
       },
       {
         category: "Mocktails", items: [
-          { name: "Fruit Punch", price: 149 }, { name: "Kiwi Margarita", price: 149 }, { name: "Virgin Mojito", price: 89 }, { name: "Blue Lagoon", price: 79 }, { name: "Pina Colada", price: 139 }, { name: "Orange Blossom", price: 129 }, { name: "Cold Coffee", price: 119 }, { name: "Cold Coffee with Ice Cream", price: 139 }, { name: "Choice of Shake", price: 119 }, { name: "Oreo Shake", price: 139 }, { name: "Vanilla", price: 119 }, { name: "Butter Scotch", price: 119 }, { name: "Chocolate", price: 119 }, { name: "Hot Chocolate", price: 99 }]
+          { name: "Virgin Mojito", price: 89 },
+          { name: "Blue Lagoon", price: 79 },
+          { name: "Cold Coffee", price: 119 },
+          { name: "Cold Coffee with Ice Cream", price: 139 },
+          { name: "Choice of Shake", price: 119 },
+          { name: "Oreo Shake", price: 139 },
+          { name: "Vanilla", price: 119 },
+          { name: "Butter Scotch", price: 119 },
+          { name: "Chocolate", price: 119 },
+          { name: "Hot Chocolate", price: 99 }
+        ]
+      },
+      {
+        category: "Pasta La Vista", items: [
+          { name: "White Sauce Pasta", price: 289 },
+          { name: "Red Sauce Pasta", price: 229 },
+          { name: "Pink Sauce Pasta", price: 249 }
+        ]
+      },
+      {
+        category: "Sandwich", items: [
+          { name: "Veg Grilled Sandwich", price: 89 },
+          { name: "Masala Sandwich", price: 99 },
+          { name: "Veg Cheese Sandwich", price: 119 },
+          { name: "Veg & Cheese Open Toast", price: 109 },
+          { name: "Veg Club Sandwich", price: 119 },
+          { name: "Paneer Tikka Sandwich", price: 159 },
+          { name: "Indori Sev Sandwich", price: 109 },
+          { name: "Corn Cheese Sandwich", price: 129 },
+          { name: "Sabse Accha", price: 89 },
+          { name: "Bombay Grilled Sandwich", price: 109 }
+        ]
+      },
+      {
+        category: "Validitate China", items: [
+          { name: "Chilly Paneer", price: 269 },
+          { name: "Paneer 65", price: 279 },
+          { name: "Chilly Mushroom / Baby Corn", price: 269 },
+          { name: "Paneer Black Pepper", price: 249 },
+          { name: "Jalapeno Cheese Cigar Roll", price: 259 },
+          { name: "Paneer Hot Garlic Sauce", price: 269 },
+          { name: "Paneer Crispy", price: 279 },
+          { name: "Paneer Hong Kong", price: 299 }
+        ]
+      },
+      {
+        category: "Wohi Jo Hum China Se Laye", items: [
+          { name: "Hakka Noodles", price: 199 },
+          { name: "Schezwan Noodles", price: 209 },
+          { name: "Chilly Garlic Noodles", price: 219 },
+          { name: "Burnt Garlic Noodles", price: 229 },
+          { name: "Fried Rice", price: 209 },
+          { name: "Schezwan Fried Rice", price: 219 },
+          { name: "Burnt Garlic Fried Rice", price: 219 },
+          { name: "Chilly Garlic Fried Rice", price: 219 }
+        ]
+      },
+      {
+        category: "It's Chings By Chinese", items: [
+          { name: "Veg Manchurian", price: 199 },
+          { name: "Honey Chilly Potato", price: 209 },
+          { name: "Veg Kothe", price: 199 },
+          { name: "Crispy Veg", price: 189 },
+          { name: "Crispy Corn", price: 199 },
+          { name: "Spring Roll", price: 219 },
+          { name: "Veg Lollipop", price: 229 },
+          { name: "Veg Bullet", price: 219 },
+          { name: "Chinese Plater", price: 449 }
+        ]
+      },
+      {
+        category: "Pizzeria", items: [
+          { name: "Cheese Pizza", price: 259 },
+          { name: "Vegetable Pizza", price: 259 },
+          { name: "Paneer / Mushroom Pizza", price: 269 },
+          { name: "Guest Choice Pizza", price: 269 }
+        ]
+      },
+      {
+        category: "Sabj Helloni", items: [
+          { name: "Veg Kolhapuri", price: 229 },
+          { name: "Subji Diwani Handi", price: 229 },
+          { name: "Matar Mushroom", price: 239 },
+          { name: "Dum Aloo Kashmiri", price: 229 },
+          { name: "Lehsuni Palak", price: 199 },
+          { name: "Malai Kofta", price: 279 },
+          { name: "Nargisi Kofta", price: 239 },
+          { name: "Bhindi Masala", price: 199 },
+          { name: "Aloo Gobhi Adraki", price: 189 },
+          { name: "Kaju Curry Red", price: 299 },
+          { name: "Kaju Curry", price: 309 },
+          { name: "Sev Tamatar", price: 179 },
+          { name: "Pindi Chole", price: 229 },
+          { name: "Veg Kofta", price: 229 },
+          { name: "Navratan Korma", price: 259 },
+          { name: "Veg Patiala", price: 289 },
+          { name: "Cheese Kofta", price: 259 },
+          { name: "Dudh Sev", price: 289 }
+        ]
+      },
+      {
+        category: "Some Cottage Cheese — Paneer", items: [
+          { name: "Kadhai Paneer", price: 279 },
+          { name: "Paneer Tikka Masala", price: 279 },
+          { name: "Butter Paneer Masala", price: 289 },
+          { name: "Paneer Chatpata", price: 279 },
+          { name: "Paneer Lababdar", price: 279 },
+          { name: "Paneer Angara", price: 309 },
+          { name: "Paneer Kholhapuri", price: 269 },
+          { name: "Kaju Paneer", price: 299 },
+          { name: "Cheese Butter Masala", price: 299 },
+          { name: "Paneer Pasanda", price: 299 },
+          { name: "Paneer Rajwadi", price: 299 },
+          { name: "Paneer Makhani Bhurji", price: 289 },
+          { name: "Paneer Patiala", price: 289 },
+          { name: "Paneer Maharaj", price: 299 },
+          { name: "Palak Paneer", price: 269 },
+          { name: "Paradise Special Paneer", price: 349 }
+        ]
+      },
+      {
+        category: "Queen Of Food Times — Dal", items: [
+          { name: "Dal Fry", price: 189 },
+          { name: "Dal Tadka", price: 189 },
+          { name: "Dal Palak", price: 189 },
+          { name: "Dal Lehsuni", price: 199 },
+          { name: "Dal Makhni", price: 219 },
+          { name: "Half Dal", price: 99 }
+        ]
+      },
+      {
+        category: "Bread Basket", items: [
+          { name: "Tandoori Roti Plain", price: 20 },
+          { name: "Tandoori Roti Butter", price: 25 },
+          { name: "Laccha Paratha", price: 35 },
+          { name: "Pudina Paratha", price: 49 },
+          { name: "Plain Naan", price: 45 },
+          { name: "Butter Naan", price: 55 },
+          { name: "Garlic Naan", price: 69 },
+          { name: "Chilli Garlic Naan", price: 75 },
+          { name: "Onion Chilli Garlic Naan", price: 79 },
+          { name: "Missi Roti", price: 79 },
+          { name: "Stuffed Paratha", price: 79 },
+          { name: "Bread Basket", price: 279 }
+        ]
+      },
+      {
+        category: "It's An Advice To Take Rice", items: [
+          { name: "Steam Rice", price: 159 },
+          { name: "Jeera Rice", price: 169 },
+          { name: "Chilli Onion Rice", price: 179 },
+          { name: "Green Peas Pulav", price: 179 },
+          { name: "Tawa Pulav", price: 189 },
+          { name: "Butter Khichdi", price: 189 },
+          { name: "Veg Biryani", price: 259 },
+          { name: "Hyderabadi Biryani", price: 269 },
+          { name: "Half Rice", price: 99 }
+        ]
       },
       {
         category: "Sugar Tooth", items: [
-          { name: "Gulab Jamun", price: 59 }, { name: "Gulab Jamun with Rabdi", price: 99 }, { name: "Jamunilla", price: 89 }, { name: "Mango Rabdi", price: 99 }, { name: "Shahi Tukda", price: 99 }, { name: "Sizzler Brownie with Ice Cream", price: 179 }]
+          { name: "Gulab Jamun", price: 79 },
+          { name: "Rasgulla", price: 69 },
+          { name: "Gulab Jamun with Ice Cream", price: 109 },
+          { name: "Sizzler Brownie with Ice Cream", price: 179 }
+        ]
       },
       {
         category: "Him Clim", items: [
-          { name: "Vanilla", price: 59 }, { name: "Chocolate", price: 59 }, { name: "Alfonso", price: 69 }, { name: "Strawberry", price: 69 }, { name: "Golden Magic", price: 69 }, { name: "Pan", price: 69 }]
+          { name: "Vanilla", price: 69 },
+          { name: "Chocolate", price: 79 },
+          { name: "Butter Scotch", price: 79 },
+          { name: "American Nuts", price: 89 }
+        ]
       }
     ];
 
